@@ -8,7 +8,7 @@ export default {
     extend: {
       colors:{
         'logo-color': "#8532fa"
-      }
+      },
     },
   },
   plugins: [],
