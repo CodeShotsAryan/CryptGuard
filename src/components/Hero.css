@@ -1,7 +1,10 @@
 .Hero-sec-img{
    animation: img-float 1s ease-in-out infinite alternate;
-   box-shadow: 0px 0px 30px #b989fd;
+   box-shadow: 0px 0px 30px #c29af9;
    border-radius: 2%;
+}
+.Hero-sec-img>img{
+    width: 400px;
 }
 @keyframes img-float {
     0%{
