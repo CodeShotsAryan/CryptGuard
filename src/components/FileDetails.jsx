@@ -8,4 +8,4 @@ function FileDetails() {
   )
 }
 
-export default FileDetails
+export default FileDetails;
