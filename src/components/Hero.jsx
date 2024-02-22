@@ -1,4 +1,5 @@
 import HeroImg from "../assets/HeroImg.jpg";
+import './Hero.css';
 function Hero() {
   return (
     <section className="flex h-96 items-center justify-center p-36 gap-7">
@@ -11,7 +12,7 @@ function Hero() {
           fugiat numquam quas.
         </p>
       </div>
-      <div className="">
+      <div className="Hero-sec-img">
         <img src={HeroImg} className="rounded-md"/>
       </div>
     </section>

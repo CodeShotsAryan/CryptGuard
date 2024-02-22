@@ -1,0 +1,11 @@
+.Hero-sec-img{
+   animation: img-float 1s ease-in-out infinite alternate;
+}
+
+@keyframes img-float {
+    0%{
+      transform: translateY(5px);
+    }100%{
+      transform: translateY(-5px);
+    }
+}
