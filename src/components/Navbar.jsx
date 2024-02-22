@@ -11,9 +11,9 @@ function Navbar() {
      <div className='menu-list'>
         <ul className='flex items-center gap-7 font-medium'>
           <a className='cursor-pointer text-logo-color py-5'><li>Home</li></a>
+          <a className='cursor-pointer hover:text-logo-color transition duration-75 py-5'><li>Login</li></a>
+          <a className='cursor-pointer hover:text-logo-color transition duration-75 py-5'><li>Register</li></a>
           <a className='cursor-pointer hover:text-logo-color transition duration-75 py-5'><li>About us</li></a>
-          <a className='cursor-pointer hover:text-logo-color transition duration-75 py-5'><li>Portfolio</li></a>
-          <a className='cursor-pointer hover:text-logo-color transition duration-75 py-5'><li>Info</li></a>
           <a className='cursor-pointer hover:text-logo-color transition duration-75 py-5'><li>Contact us</li></a>
         </ul>
      </div>
