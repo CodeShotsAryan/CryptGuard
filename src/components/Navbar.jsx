@@ -3,7 +3,7 @@ import './Navbar.css';
 import Logo from '../assets/logo.png';
 function Navbar() {
   return (
-   <nav className='flex  justify-around h-16 items-center bg-slate-100'>
+   <nav className='flex  justify-around h-16 items-center'>
      <div className='logo'>
        {/* <h1 className='text-logo-color font-bold cursor-pointer'>Your logo</h1> */}
        <img src={Logo}/>
