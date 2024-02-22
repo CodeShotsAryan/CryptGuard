@@ -2,9 +2,36 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
+import { Route , RouterProvider , createBrowserRouter , createRoutesFromElements } from 'react-router-dom'
+import Layout from './Layout.jsx'
+import Home from './components/Home'
+import Loading from './components/Loading'
+import Login from './components/Login'
+import Registration from './components/Registration'
+import Dashboard from './components/Dashboard'
+import FileMangementInterface from './components/FileMangementInterface'
+import AccountSettingInterface from './components/AccountSettingInterface'
+import FileDetails from './components/FileDetails'
+import Error from './components/Error'
+import Navbar from './components/Navbar'
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path='/' element={<Layout/>}>
+      <Route path='' element={<Home/>}/>
+      <Route path='login/' element={<Login/>}/>
+      <Route path='registration' element={<Registration/>}/>
+      <Route path='dashboard' element={<Dashboard/>}/>
+      <Route path='filemanagementinterface' element={<FileMangementInterface/>}/>
+      <Route path='accountsettinginterface' element={<AccountSettingInterface/>}/>
+      <Route path='filedetails' element={<FileDetails/>}/>
+      <Route path='error' element={<Error/>}/>
+      <Route path='loading' element={<Loading/>}/>
+    </Route>
+  )
+)
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router}/>
   </React.StrictMode>,
 )
