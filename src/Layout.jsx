@@ -6,8 +6,7 @@ function Layout() {
   return (
     <div>
       <Navbar />
-      <Hero/>
-      {/* <Outlet /> */}
+      <Outlet/> 
     </div>
   )
 }
