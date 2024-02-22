@@ -1,0 +1,18 @@
+ul a{
+  position: relative;
+}
+ul a::before{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 1.5px;
+    bottom: 15px;
+    background-color: #8532fa;
+    transition: 0.2s linear all;
+}
+ul a:nth-child(1)::before{
+    width: 100%;
+}
+ul a:hover::before{
+   width: 100%;
+}
