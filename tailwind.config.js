@@ -9,6 +9,9 @@ export default {
       colors:{
         'logo-color': "#8532fa"
       },
+      width:{
+        'text1-width':"500px"
+      }
     },
   },
   plugins: [],
