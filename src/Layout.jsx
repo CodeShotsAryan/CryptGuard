@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom'
 import Navbar from './components/Navbar'
 
 function Layout() {
-  const [isLogin , setIsLogin]= useState(false)
+  const [isLogin , setIsLogin]= useState(true)
   return (
     <div>
       {isLogin ? <Navbar /> :  null}
