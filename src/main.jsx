@@ -17,6 +17,8 @@ import Navbar from './components/Navbar'
 import About from './components/About.jsx'
 import '@radix-ui/themes/styles.css';
 import { Theme } from '@radix-ui/themes'
+import userContextProvider from './Context/userContextProvider.jsx'
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout/>}>
@@ -36,8 +38,11 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-  <Theme>
-    <RouterProvider router={router}/>
-  </Theme>
+    <userContextProvider>
+      <Theme>
+        <RouterProvider router={router}/>
+      </Theme> 
+    </userContextProvider>
   </React.StrictMode>,
+
 )
