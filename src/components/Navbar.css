@@ -8,8 +8,8 @@ nav{
     content: '';
     position: absolute;
     width: 0%;
-    height: 2px;
-    bottom: -3px;
+    height: 2.5px;
+    bottom: -5px;
     background-color: #8532fa;
     transition: 0.2s linear all;
 }

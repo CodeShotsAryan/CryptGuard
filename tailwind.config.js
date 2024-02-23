@@ -7,10 +7,15 @@ export default {
   theme: {
     extend: {
       colors:{
-        'logo-color': "#8532fa"
+        'logo-color': "#8532fa",
+        'bg-color1' : "#f5fcff"
       },
       width:{
-        'text1-width':"500px"
+        'text1-width':"500px",
+        // 'text2-width' : "500px"
+      },
+      height:{
+        'custom-height1' : "500px"
       }
     },
   },
