@@ -2,7 +2,7 @@ import HeroImg from "../assets/HeroImg.jpg";
 import './Hero.css';
 function Hero() {
   return (
-    <section className="flex h-96 items-center justify-center gap-7 Hero-sec-info">
+    <section className="flex h-96 items-center justify-center gap-7 mt-9 Hero">
       <div className="flex flex-col gap-5">
         <h1 className="font-bold text-3xl w-60">Welcome to <span className="text-logo-color">CRYPTGUARD</span></h1>
         <p className="w-text1-width">
