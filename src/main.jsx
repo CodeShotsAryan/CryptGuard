@@ -17,6 +17,10 @@ import Navbar from './components/Navbar'
 import About from './components/About.jsx'
 import '@radix-ui/themes/styles.css';
 import { Theme } from '@radix-ui/themes'
+import { Provider } from 'react-redux'
+
+import store from './store/store.js'
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout/>}>
@@ -26,7 +30,7 @@ const router = createBrowserRouter(
       <Route path='dashboard' element={<Dashboard/>}/>
       <Route path='filemanagementinterface' element={<FileMangementInterface/>}/>
       <Route path='accountsettinginterface' element={<AccountSettingInterface/>}/>
-      <Route path='filedetails' element={<FileDetails/>}/>
+      <Route path='dashboard/filedetails' element={<FileDetails/>}/>
       <Route path='error' element={<Error/>}/>
       <Route path='loading' element={<Loading/>}/>
       <Route path='about' element={<About/>} />
@@ -36,8 +40,10 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+  <Provider store={store}>
       <Theme>
         <RouterProvider router={router}/>
       </Theme> 
+  </Provider>
   </React.StrictMode>
 )
