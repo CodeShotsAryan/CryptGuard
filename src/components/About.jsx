@@ -6,22 +6,23 @@ import AboutImg from  '../assets/AboutImage.jpg';
 
 function AboutPage() {
   return (
-    <div className=" bg-bg-color1 h-custom-height1 flex items-center justify-center gap-8">
-      <section className="About-info">
-        <h1 className=" font-bold text-3xl">
-          About <span className="text-logo-color">CryptGuard</span>
-        </h1>
-        <p className="font-medium text-lg w-text1-width mt-4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-          aliquam justo sed ante mollis, nec suscipit est accumsan. Vestibulum
-          dapibus erat eget urna posuere, nec vehicula nunc vestibulum. Sed nec
-          ullamcorper ex.
-        </p>
-      </section>
-      <section className="About-info-img">
-        <img src={AboutImg}/>
-      </section>
-      {/* <section className='mb-12'>
+    // <div className=" bg-bg-color1 h-custom-height1 flex items-center justify-center gap-8">
+    //   <section className="About-info">
+    //     <h1 className=" font-bold text-3xl">
+    //       About <span className="text-logo-color">CryptGuard</span>
+    //     </h1>
+    //     <p className="font-medium text-lg w-text1-width mt-4">
+    //       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+    //       aliquam justo sed ante mollis, nec suscipit est accumsan. Vestibulum
+    //       dapibus erat eget urna posuere, nec vehicula nunc vestibulum. Sed nec
+    //       ullamcorper ex.
+    //     </p>
+    //   </section>
+    //   <section className="About-info-img">
+    //     <img src={AboutImg}/>
+    //   </section>
+    <div>
+      <section className='mb-12'>
         <h1 className='text-3xl font-semibold mb-4'>Project Overview</h1>
         <p className='text-lg'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquam
@@ -58,7 +59,7 @@ function AboutPage() {
           <br />
           Phone: +1234567890
         </p>
-      </section> */}
+      </section>
     </div>
   );
 }

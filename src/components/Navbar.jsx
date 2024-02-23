@@ -1,31 +1,39 @@
-// Navbar.js
-
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation, NavLink } from 'react-router-dom';
 import Logo from '../assets/logo.png';
-import { NavLink } from 'react-router-dom';
 import './Navbar.css';
 
 function Navbar() {
+  const location = useLocation();
+  const [focusedLink, setFocusedLink] = useState(''); 
+
+  useEffect(() => {
+    const path = location.pathname;
+    const link = path === '/' ? 'home' : path.substring(1);
+    setFocusedLink(link);
+  }, [location]);
+
   return (
     <nav className='flex justify-around h-16 items-center'>
       <div className='logo'>
-        <NavLink to='/'><img src={Logo} alt='Logo' className='h-10' /></NavLink>
+        <NavLink to='/'>
+          <img src={Logo} alt='Logo' className='h-10' />
+        </NavLink>
       </div>
       <div className='menu-list'>
         <ul className='flex items-center gap-7 font-medium'>
-          <li>
-            <NavLink to='/' className='cursor-pointer text-logo-color py-5'  >Home</NavLink>
+          <li className={focusedLink === 'home' ? 'focused' : ''}>
+            <NavLink to='/' className='cursor-pointer py-5'>Home</NavLink>
           </li>
-          <li>
-            <NavLink to='/register'  className='cursor-pointer hover:text-logo-color transition duration-75 py-5'>Register</NavLink>
+          <li className={focusedLink === 'register' ? 'focused' : ''}>
+            <NavLink to='/register' className='cursor-pointer py-5'>Register</NavLink>
           </li>
-          <li>
-            <NavLink to='/login' className='cursor-pointer hover:text-logo-color transition duration-75 py-5'>Login</NavLink>
+          <li className={focusedLink === 'login' ? 'focused' : ''}>
+            <NavLink to='/login' className='cursor-pointer py-5'>Login</NavLink>
           </li>
-          <li>
-            <NavLink to='/about' className='cursor-pointer hover:text-logo-color transition duration-75 py-5'>About us</NavLink>
+          <li className={focusedLink === 'about' ? 'focused' : ''}>
+            <NavLink to='/about' className='cursor-pointer py-5'>About us</NavLink>
           </li>
-         
         </ul>
       </div>
     </nav>
