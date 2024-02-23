@@ -26,7 +26,7 @@ const router = createBrowserRouter(
       <Route path='dashboard' element={<Dashboard/>}/>
       <Route path='filemanagementinterface' element={<FileMangementInterface/>}/>
       <Route path='accountsettinginterface' element={<AccountSettingInterface/>}/>
-      <Route path='filedetails' element={<FileDetails/>}/>
+      <Route path='dashboard/filedetails' element={<FileDetails/>}/>
       <Route path='error' element={<Error/>}/>
       <Route path='loading' element={<Loading/>}/>
       <Route path='about' element={<About/>} />
