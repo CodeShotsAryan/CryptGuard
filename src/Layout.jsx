@@ -7,7 +7,7 @@ function Layout() {
   const {isLogged, setIsLogged} = useContext(userContext);
 
   return (
-
+     
     <div  >
     {
       isLogged ? null : <Navbar />
