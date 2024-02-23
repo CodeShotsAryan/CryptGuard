@@ -1,6 +1,6 @@
 import React from "react";
-// import { useForm } from "react-hook-form";
-
+import { useForm } from "react-hook-form";
+import {Link , NavLink} from 'react-router-dom'
 function Login() {
   const {
     register,
@@ -28,7 +28,7 @@ function Login() {
               <div className="mt-2">
                 <input
                   id="email"
-                  name="email"
+                  name="email"  
                   type="email"
                   autoComplete="email"
                   {...register("username", { required: "Email is required" })}
@@ -79,12 +79,26 @@ function Login() {
               </div>
             </div>
             <div className="">
-              <button
-                type="submit"
-                className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              >
-                Sign in
-              </button>
+                  <Link  to={'/dashboard'} >
+                  <button
+                  type="submit"
+                  className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                >
+                  Log in
+                </button>
+  
+                  </Link>
+            </div>
+            <div className="">
+                  <Link to={'/register'} >
+                  <span>Not Registered ?</span>
+                  <button
+                  type="submit"
+                  className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                >
+                  Register ?
+                </button>
+                  </Link>
             </div>
           </form>
         </div>

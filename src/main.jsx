@@ -6,26 +6,28 @@ import { Route , RouterProvider , createBrowserRouter , createRoutesFromElements
 import Layout from './Layout.jsx'
 import Home from './components/Home'
 import Loading from './components/Loading'
-import Login from './components/Login'
-import Registration from './components/Registration'
+import Login from './components/Login/Login.jsx'
+import Register from './components/Register/Register.jsx'
 import Dashboard from './components/Dashboard'
 import FileMangementInterface from './components/FileMangementInterface'
 import AccountSettingInterface from './components/AccountSettingInterface'
 import FileDetails from './components/FileDetails'
 import Error from './components/Error'
 import Navbar from './components/Navbar'
+import About from './components/About.jsx'
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout/>}>
       <Route path='' element={<Home/>}/>
       <Route path='login/' element={<Login/>}/>
-      <Route path='registration' element={<Registration/>}/>
+      <Route path='register' element={<Register/>}/>
       <Route path='dashboard' element={<Dashboard/>}/>
       <Route path='filemanagementinterface' element={<FileMangementInterface/>}/>
       <Route path='accountsettinginterface' element={<AccountSettingInterface/>}/>
       <Route path='filedetails' element={<FileDetails/>}/>
       <Route path='error' element={<Error/>}/>
       <Route path='loading' element={<Loading/>}/>
+      <Route path='about' element={<About/>} />
     </Route>
   )
 )
