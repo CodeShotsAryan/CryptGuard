@@ -1,3 +1,4 @@
+
 .Hero-sec-img{
    animation: img-float 1s ease-in-out infinite alternate;
    box-shadow: 0px 0px 30px #c29af9;
@@ -12,4 +13,25 @@
     }100%{
       transform: translateY(-5px);
     }
+}
+.Hero>div>button{
+   position: relative;  
+   z-index: 1;
+}
+.Hero>div>button::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 0%;
+  background-color: rgb(43, 42, 42);
+  transition: 0.2s linear all;
+  transform-origin: left;
+  border-radius: 5px;
+  z-index: -1;
+}
+.Hero>div>button:hover::before{
+    width: 100%;
 }

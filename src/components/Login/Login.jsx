@@ -1,6 +1,10 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+<<<<<<< HEAD:src/components/Login/Login.jsx
 import {Link , NavLink} from 'react-router-dom'
+=======
+
+>>>>>>> 5f1b1b9e926b76a1c30491d195161a2312d0147d:src/components/Login.jsx
 function Login() {
   const {
     register,
