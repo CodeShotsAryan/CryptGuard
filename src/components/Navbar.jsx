@@ -3,12 +3,13 @@
 import React from 'react';
 import Logo from '../assets/logo.png';
 import { NavLink } from 'react-router-dom';
+import './Navbar.css';
 
 function Navbar() {
   return (
     <nav className='flex justify-around h-16 items-center'>
       <div className='logo'>
-        <img src={Logo} alt='Logo' className='h-10' />
+        <NavLink to='/'><img src={Logo} alt='Logo' className='h-10' /></NavLink>
       </div>
       <div className='menu-list'>
         <ul className='flex items-center gap-7 font-medium'>
