@@ -13,7 +13,7 @@ nav{
     background-color: #8532fa;
     transition: 0.2s linear all;
 }
-.menu-list ul l:nth-child(1)::before{
+.menu-list ul li:nth-child(1)::before{
     width: 100%;
 }
 .menu-list ul li:hover::before{
