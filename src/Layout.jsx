@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero';
 function Layout() {
+  const [isLogin , setIsLogin]= useState(false)
   return (
     <div>
-      <Navbar />
+      {isLogin ? <Navbar /> :  null}
       <Outlet/> 
     </div>
   )
