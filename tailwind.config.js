@@ -16,6 +16,9 @@ export default {
       },
       height:{
         'custom-height1' : "500px"
+      },
+      screens:{
+        'media-1' : {'max' : "975px"}
       }
     },
   },
