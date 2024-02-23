@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, Flex, Avatar, Box, Text } from "@radix-ui/themes";
 import "./filedetails.css";
+import { Link } from "react-router-dom";
 function FileDetails() {
   return (
     <div className="filedetails">
@@ -12,15 +13,16 @@ function FileDetails() {
               Title
             </Text>
             <Text as="div" size="4" color="gray">
-              description :  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              description : <br/> Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Voluptates quo eaque natus dolorum ipsa atque, fugiat voluptatibus
             </Text>
             <Text as="div" size="4" color="gray">
               Size
             </Text>
             <Text as="div" size="4" color="gray">
-              Engineering
+              Format
             </Text>
+            <Link to=''><button className="gobackbtn">Go Back</button></Link>
           </Box>
         </Flex>
       </Card>
