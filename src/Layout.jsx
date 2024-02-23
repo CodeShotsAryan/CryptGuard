@@ -1,13 +1,15 @@
 import React, { useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import Navbar from './components/Navbar';
+import { useSelector , useDispatch} from 'react-redux';
+import { makeTrue, makeFalse } from './app/store';
 function Layout() {
-  const [login , setLogin] = useState(false)
+  const isLoggedIn = useSelector(state => state.navbarHandler.value)
   return (
      
     <div  >
     {
-      login ? null : <Navbar />
+      isLoggedIn ? null : <Navbar />
     }
       <Outlet/> 
     </div>

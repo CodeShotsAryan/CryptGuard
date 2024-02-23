@@ -2,8 +2,14 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import {Link , NavLink} from 'react-router-dom'
 import Navbar from '../Navbar.jsx';
-
+import { useDispatch } from "react-redux";
+import { makeTrue , makeFalse } from "../../app/store.js";
 function Login() {
+
+  const dispatch = useDispatch()
+  const handleMakeTrue = () => {
+    dispatch(makeTrue());
+  };
   const {
     register,
     handleSubmit,
@@ -86,6 +92,7 @@ function Login() {
                   type="submit"
                   className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                   onSubmit={submitted => submitted()}
+                  onClick={handleMakeTrue}
                 >
                   Log in
                 </button>
