@@ -1,22 +1,22 @@
 nav{
   background-color: #f8f5fd;
 }
-ul a{
+.menu-list ul li{
   position: relative;
 }
-ul a::before{
+.menu-list ul li::before{
     content: '';
     position: absolute;
     width: 0%;
-    height: 1.5px;
-    bottom: 15px;
+    height: 2px;
+    bottom: -3px;
     background-color: #8532fa;
     transition: 0.2s linear all;
 }
-ul a:nth-child(1)::before{
+.menu-list ul l:nth-child(1)::before{
     width: 100%;
 }
-ul a:hover::before{
+.menu-list ul li:hover::before{
    width: 100%;
 }
 .logo>img{
