@@ -20,6 +20,7 @@ ul a:hover::before{
    width: 100%;
 }
 .logo>img{
-  width: 35px;
+  width: 32px;
   border-radius: 50%;
+  cursor: pointer;
 }

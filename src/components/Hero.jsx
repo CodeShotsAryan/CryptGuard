@@ -14,7 +14,7 @@ function Hero() {
         <button className="bg-logo-color w-28 text-white py-2 rounded-md">Get started</button>
       </div>
       <div className="Hero-sec-img">
-        <img src={HeroImg} className="rounded-md" draggable="false"/>
+        <img src={HeroImg} className="rounded-md select-none" draggable="false"/>
       </div>
     </section>
   );
