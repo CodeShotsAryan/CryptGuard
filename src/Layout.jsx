@@ -1,12 +1,15 @@
-import React, { useState, useContext } from "react";
-import { Outlet } from "react-router-dom";
-import Navbar from "./components/Navbar";
+import React, { useState } from 'react'
+import { Outlet } from 'react-router-dom'
+import Navbar from './components/Navbar';
 function Layout() {
-  // const {isLogged , setIsLogged} = useContext(UserContext)
+  const [login , setLogin] = useState(false)
   return (
-    <div>
-      <Navbar />
-      <Outlet />
+     
+    <div  >
+    {
+      login ? null : <Navbar />
+    }
+      <Outlet/> 
     </div>
   );
 }
