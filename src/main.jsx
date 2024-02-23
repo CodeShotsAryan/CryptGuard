@@ -17,7 +17,6 @@ import Navbar from './components/Navbar'
 import About from './components/About.jsx'
 import '@radix-ui/themes/styles.css';
 import { Theme } from '@radix-ui/themes'
-import LoginContextProvider from './context/LoginContextProvider.jsx'
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout/>}>
@@ -36,12 +35,9 @@ const router = createBrowserRouter(
 )
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <LoginContextProvider>
   <React.StrictMode>
       <Theme>
         <RouterProvider router={router}/>
       </Theme> 
   </React.StrictMode>
-  </LoginContextProvider>
-
 )
