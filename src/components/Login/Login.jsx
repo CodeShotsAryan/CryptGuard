@@ -1,15 +1,12 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import {Link , NavLink} from 'react-router-dom'
-import Navbar from '../Navbar.jsx';
+import { Link } from 'react-router-dom';
 import { useDispatch } from "react-redux";
-import { makeTrue , makeFalse } from "../../app/store.js";
-function Login() {
+import { makeTrue } from "../../app/store.js";
 
-  const dispatch = useDispatch()
-  const handleMakeTrue = () => {
-    dispatch(makeTrue());
-  };
+function Login() {
+  const dispatch = useDispatch();
+
   const {
     register,
     handleSubmit,
@@ -19,6 +16,10 @@ function Login() {
   const onSubmit = (data) => {
     console.log(data);
     // You can handle form submission logic here, like making API calls
+  };
+
+  const handleMakeTrue = () => {
+    dispatch(makeTrue());
   };
 
   return (
@@ -39,14 +40,14 @@ function Login() {
                   name="email"  
                   type="email"
                   autoComplete="email"
-                  {...register("username", { required: "Email is required" })}
+                  {...register("email", { required: "Email is required" })}
                   className={`block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ${
-                    errors.username ? "border-red-500" : ""
+                    errors.email ? "border-red-500" : ""
                   }`}
                 />
-                {errors.username && (
+                {errors.email && (
                   <span className="text-red-500 text-sm">
-                    {errors.username.message}
+                    {errors.email.message}
                   </span>
                 )}
               </div>
@@ -87,28 +88,26 @@ function Login() {
               </div>
             </div>
             <div className="">
-                  <Link  to={'/dashboard'} >
-                  <button
+              <Link to={'/dashboard'} >
+                <button
                   type="submit"
                   className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                  onSubmit={submitted => submitted()}
                   onClick={handleMakeTrue}
                 >
                   Log in
                 </button>
-  
-                  </Link>
+              </Link>
             </div>
             <div className="">
-                  <Link to={'/register'} >
-                  <span>Not Registered ?</span>
-                  <button
-                  type="submit"
+              <Link to={'/register'} >
+                <span>Not Registered ?</span>
+                <button
+                  type="button"
                   className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
                   Register ?
                 </button>
-                  </Link>
+              </Link>
             </div>
           </form>
         </div>
