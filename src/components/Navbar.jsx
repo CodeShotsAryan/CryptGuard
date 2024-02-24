@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, NavLink } from 'react-router-dom';
-import Logo from '../assets/logo.png';
+import logo1 from '../assets/logo1.png';
 import './Navbar.css';
 
 function Navbar() {
@@ -17,7 +17,7 @@ function Navbar() {
     <nav className='flex justify-around h-16 items-center'>
       <div className='logo'>
         <NavLink to='/'>
-          <img src={Logo} alt='Logo' className='h-10' />
+          <img src={logo1} alt='Logo' className='h-20' />
         </NavLink>
       </div>
       <div className='menu-list'>
