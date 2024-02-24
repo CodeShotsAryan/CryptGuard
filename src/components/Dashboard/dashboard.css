@@ -71,7 +71,9 @@
     align-items: center;
     gap: 20px;
 }
-
+.sidenav-2{
+    margin-bottom: 26px;
+}
 .sidenav-1 .sidenav-logo{
     padding-bottom: 20px;
 }
