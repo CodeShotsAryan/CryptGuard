@@ -12,10 +12,7 @@ function AboutPage() {
           About <span className="text-indigo-600">CryptGuard</span>
         </h1>
         <p className="text-lg text-gray-800 text-center max-w-lg">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-          aliquam justo sed ante mollis, nec suscipit est accumsan. Vestibulum
-          dapibus erat eget urna posuere, nec vehicula nunc vestibulum. Sed nec
-          ullamcorper ex.
+        CryptGuard is your trusted partner in digital security. Our mission is simple: to empower individuals and businesses to protect their sensitive information and maintain their privacy online.
         </p>
       </section>
 
@@ -58,10 +55,13 @@ function AboutPage() {
         <p className="text-lg text-gray-800">
           For inquiries or support, please contact us at:
           <br />
-          Email: contact@example.com
+          Email: cryptguardprotect@com
           <br />
-          Phone: +1234567890
+          Phone: 8169964459
         </p>
+        <div className="get-in-touch">
+        <p className="text-center">Have questions? Reach out to us <a href="contact.html" className="text-blue-500">here</a>!</p>
+      </div>
       </section>
     </div>
   );
