@@ -7,7 +7,7 @@ function FileDetails() {
   const navigate = useNavigate();
   
   const handleClick = () => {
-    navigate('/dashboard'); // Navigate to '/some-path'
+    navigate('/dashboard');
   };
   return (
     <div className="filedetails">

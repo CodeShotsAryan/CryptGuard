@@ -1,21 +1,23 @@
 import { configureStore, createSlice } from '@reduxjs/toolkit';
 
+const initialState = {
+  isLoggedIn: false,
+};
+
 const navbarHandlerSlice = createSlice({
   name: 'navbarHandler',
-  initialState: {
-    value: false,
-  },
+  initialState, 
   reducers: {
     makeTrue: state => {
-      state.value += 1;
+      state.isLoggedIn = true;
     },
     makeFalse: state => {
-      state.value -= 1;
+      state.isLoggedIn = false;
     },
   },
 });
 
-export const { makeFalse, makeTrue} = navbarHandlerSlice.actions;
+export const { makeFalse, makeTrue } = navbarHandlerSlice.actions;
 export const navbarHandlerReducer = navbarHandlerSlice.reducer;
 
 export default configureStore({
