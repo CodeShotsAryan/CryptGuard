@@ -9,6 +9,8 @@ Currently, two official plugins are available:
 
 <h1>Contributors</h1>
 
-@ARYANPATILSOLOCODER11
-@Avishkar68
-@SanketBhandarii
+<h2><a href="https://github.com/ARYANPATILSOLOCODER11">@ARYANPATILSOLOCODER11</a></h2>
+<h2><a href="https://github.com/Avishkar68">@Avishkar68</a></h2>
+<h2><a href="https://github.com/SanketBhandarii">@SanketBhandarii</a></h2>
+
+
