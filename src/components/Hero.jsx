@@ -1,5 +1,8 @@
+import React from "react";
+import { Link } from "react-router-dom";
 import HeroImg from "../assets/HeroImg.avif";
 import "./Hero.css";
+
 function Hero() {
   return (
     <section className="Hero flex h-96 items-center justify-center gap-7 pt-9 Hero media-1:flex-col-reverse media-1:mt-44">
@@ -13,18 +16,20 @@ function Hero() {
           asperiores hic culpa, repellendus dolorem alias quidem recusandae
           fugiat numquam quas.
         </p>
-        <button className="bg-logo-color w-28 text-white py-2 rounded-md">
+        <Link to="/login" className="bg-logo-color w-28 text-white py-2 rounded-md text-center">
           Get started
-        </button>
+        </Link>
       </div>
       <div className="Hero-sec-img">
         <img
           src={HeroImg}
           className="rounded-md select-none"
           draggable="false"
+          alt="Hero Image"
         />
       </div>
     </section>
   );
 }
+
 export default Hero;
