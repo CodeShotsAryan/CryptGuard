@@ -2,7 +2,13 @@ import React from "react";
 import { Card, Flex, Avatar, Box, Text } from "@radix-ui/themes";
 import "./filedetails.css";
 import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 function FileDetails() {
+  const navigate = useNavigate();
+  
+  const handleClick = () => {
+    navigate('/dashboard'); // Navigate to '/some-path'
+  };
   return (
     <div className="filedetails">
       <Card size="3" style={{ width: 500 }}>
@@ -22,7 +28,7 @@ function FileDetails() {
             <Text as="div" size="4" color="gray">
               Format
             </Text>
-            <Link to=''><button className="gobackbtn">Go Back</button></Link>
+            <Link to=''><button className="gobackbtn" onClick={handleClick} >Go Back</button></Link>
           </Box>
         </Flex>
       </Card>
