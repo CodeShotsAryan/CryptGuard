@@ -13,9 +13,9 @@ function Hero() {
         <p className="w-text1-width text-lg  text-gray-700 ">
         CryptGuard is your ultimate solution for safeguarding your digital assets and sensitive information. With advanced encryption and cutting-edge security features, CryptGuard ensures that your data remains protected at all times.
         </p>
-        <button className="bg-logo-color w-28 text-white py-2 rounded-md">
+        <Link to="/login" className="bg-logo-color w-28 text-white py-2 rounded-md text-center">
           Get started
-        </button>
+        </Link>
       </div>
       <div className="Hero-sec-img">
         <img
