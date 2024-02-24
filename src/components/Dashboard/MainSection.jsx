@@ -7,9 +7,9 @@ function MainSection() {
     <div className="mainsection">
       <div className="mainsection1">
         <div className="main1">
-          <h2>
+          <h2 className="text-4xl">
             Explore the world <br />
-            of Encryption
+            of <span className="text-logo-color">Encryption</span>
           </h2>
           <button>
             Create Files <i className="fa-solid fa-arrow-right"></i>
