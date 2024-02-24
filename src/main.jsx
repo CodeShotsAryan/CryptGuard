@@ -19,6 +19,7 @@ import '@radix-ui/themes/styles.css';
 import { Theme } from '@radix-ui/themes'
 import { Provider } from 'react-redux'
 import store from './app/store.js'
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout/>}>
