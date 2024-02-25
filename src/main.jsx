@@ -19,6 +19,7 @@ import '@radix-ui/themes/styles.css';
 import { Theme } from '@radix-ui/themes'
 import { Provider } from 'react-redux'
 import store from './app/store.js'
+import Draganddrop from './components/Dashboard/Draganddrop.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -30,6 +31,7 @@ const router = createBrowserRouter(
       <Route path='filemanagementinterface' element={<FileMangementInterface/>}/>
       <Route path='accountsettinginterface' element={<AccountSettingInterface/>}/>
       <Route path='dashboard/filedetails' element={<FileDetails/>}/>
+      <Route path='dashboard/draganddrop' element={<Draganddrop/>}/>
       <Route path='error' element={<Error/>}/>
       <Route path='loading' element={<Loading/>}/>
       <Route path='about' element={<About/>} />

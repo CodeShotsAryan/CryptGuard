@@ -3,7 +3,7 @@ import React from 'react'
 function CreateNew() {
   return (
     <div className='createNew'>
-      <i class="fa-solid fa-file-circle-plus"></i>
+      <i className="fa-solid fa-file-circle-plus"></i>
     </div>
   )
 }

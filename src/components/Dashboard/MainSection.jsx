@@ -2,6 +2,7 @@ import React from "react";
 import { Grid, Box } from "@radix-ui/themes";
 import FileDisplay from "./FileDisplay";
 import CreateNew from "./CreateNew";
+import { Link } from "react-router-dom";
 function MainSection() {
   return (
     <div className="mainsection">
@@ -20,31 +21,33 @@ function MainSection() {
         </div>
       </div>
       <div className="mainsection2">
-      <div >
-        <Grid columns="3" gap="3" width="auto">
-          <Box height="9" className="box-grid">
-            <FileDisplay />
-          </Box>
-          <Box height="9" className="box-grid">
-            <FileDisplay />
-          </Box>
-          <Box height="9" className="box-grid">
-            <FileDisplay />
-          </Box>
-          <Box height="9" className="box-grid">
-            <FileDisplay />
-          </Box>
-          <Box height="9" className="box-grid">
-            <FileDisplay />
-          </Box>
-          <Box height="9" className="box-grid">
-            <FileDisplay />
-          </Box>
-        </Grid>
-      </div>
-      <div >
-        <CreateNew/>
-      </div>
+        <div>
+          <Grid columns="3" gap="3" width="auto">
+            <Box height="9" className="box-grid">
+              <FileDisplay />
+            </Box>
+            <Box height="9" className="box-grid">
+              <FileDisplay />
+            </Box>
+            <Box height="9" className="box-grid">
+              <FileDisplay />
+            </Box>
+            <Box height="9" className="box-grid">
+              <FileDisplay />
+            </Box>
+            <Box height="9" className="box-grid">
+              <FileDisplay />
+            </Box>
+            <Box height="9" className="box-grid">
+              <FileDisplay />
+            </Box>
+          </Grid>
+        </div>
+        <Link to={'draganddrop'}>
+          <div>
+            <CreateNew />
+          </div>
+        </Link>
       </div>
     </div>
   );
