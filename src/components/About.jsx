@@ -6,7 +6,7 @@ import AboutImg from '../assets/AboutImage.jpg';
 
 function AboutPage() {
   return (
-    <div className="bg-gray-100 min-h-screen px-6 flex flex-col items-center pt-11 overflow-y-hidden media-2:pt-24">
+    <div className="bg-gray-100 min-h-screen px-6 flex flex-col items-center pt-11 overflow-y-hidden">
       <section className="flex flex-col items-center justify-center gap-8 mb-12">
         <h1 className="text-3xl font-bold text-indigo-900">
           About <span className="text-indigo-600">CryptGuard</span>
