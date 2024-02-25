@@ -21,7 +21,7 @@ function AboutPage() {
           Team Members
         </h2>
         <div className="flex gap-3 flex-wrap justify-center">
-          <div className="transform transition duration-500 hover:scale-105">
+          <div className="transform transition duration-500 hover:scale-105 cursor-pointer">
             <div className="bg-indigo-200 py-4 px-10 rounded">
               <h3 className="text-lg font-semibold text-indigo-900 mb-2">
                 Aryan Patil
@@ -29,7 +29,7 @@ function AboutPage() {
               <p className="text-sm text-indigo-800">Role: Developer</p>
             </div>
           </div>
-          <div className="transform transition duration-500 hover:scale-105">
+          <div className="transform transition duration-500 hover:scale-105 cursor-pointer">
             <div className="bg-indigo-200 p-4 rounded">
               <h3 className="text-lg font-semibold text-indigo-900 mb-2">
                 Sanket Bhandari
@@ -37,7 +37,7 @@ function AboutPage() {
               <p className="text-sm text-indigo-800">Role: Designer</p>
             </div>
           </div>
-          <div className="transform transition duration-500 hover:scale-105">
+          <div className="transform transition duration-500 hover:scale-105 cursor-pointer">
             <div className="bg-indigo-200 p-4 rounded">
               <h3 className="text-lg font-semibold text-indigo-900 mb-2">
                 Avishkar Kakade
