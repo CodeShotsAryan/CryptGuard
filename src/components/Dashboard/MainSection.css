@@ -1,0 +1,48 @@
+#btn{
+    border-radius: 8px;
+    width: 180p;
+    font-size: 18px;
+    background-color: rgb(171, 96, 241);
+    color: whitesmoke;
+}
+#btn>i{
+    color:white;
+}
+#btn:hover{
+    background-color: blueviolet;
+
+}
+.mainsection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mainsection1{
+    height: 320px;
+    display: flex;
+    justify-content:space-around;
+}
+/* .mainsection2>.boxes{
+    display: flex;
+    flex-wrap: wrap;
+    gap:20px;
+}
+.mainsection2{
+    gap:20px;
+} */
+.mainsection2{
+    display: flex;
+    flex-direction: column-reverse;
+    gap:10px;
+}
+.boxes1{
+    display: flex;
+    gap:10px;
+}
+.boxes2{
+    display: flex;
+    gap:10px;
+}
+@media (max-width:1323px){
+    
+}

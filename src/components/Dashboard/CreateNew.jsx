@@ -1,4 +1,5 @@
 import React from 'react'
+import './CreateNew.css';
 
 function CreateNew() {
   return (
