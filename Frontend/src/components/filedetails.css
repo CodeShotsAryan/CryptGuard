@@ -1,0 +1,14 @@
+.filedetails{
+    height: 90vh;
+    /* width: 100vw; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gobackbtn{
+    background-color: #8532fa4a;
+    padding: 10px 16px;
+    border-radius: 10px;
+    margin-top: 10px;
+}

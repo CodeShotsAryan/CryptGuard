@@ -1,0 +1,32 @@
+
+.dropzone-container{
+    overflow: hidden;
+    width: 100%;
+}
+.dropzone{
+   animation: drop 1.3s ease-in-out infinite alternate;
+}
+@keyframes drop {
+    0%{
+      transform: translateY(8px)
+    }100%{
+      transform: translateY(-8px)
+    }
+}
+.dropzone>button{
+   background-color: #8532fa;
+   font-size: 1.2rem
+}
+@media (max-width:641px) {
+    .dropzone{
+       width: 450px;
+       height: 500px;
+    }
+}
+@media (max-width:493px) {
+    .dropzone{
+       width: 350px;
+       height: 400px;
+       text-align: center;
+    }
+}
