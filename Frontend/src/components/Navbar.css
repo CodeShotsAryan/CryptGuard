@@ -1,0 +1,36 @@
+nav {
+  background-color: #f5fcff;
+}
+
+.menu-list ul li {
+  position: relative;
+}
+
+.menu-list ul li::before {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2.5px;
+  bottom: -5px;
+  background-color: #8532fa;
+  transition: width 0.2s linear;
+}
+.menu-list ul li.focused::before {
+  width: 100%; 
+}
+
+.menu-list ul li a {
+  color: #000;
+  transition: color 0.2s ease;
+}
+
+.menu-list ul li.focused a,
+.menu-list ul li:hover a {
+  color: #8532fa; 
+}
+
+.logo > img {
+  width: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+}

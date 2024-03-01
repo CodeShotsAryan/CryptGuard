@@ -1,0 +1,7 @@
+username :- cryptgaurduser
+password :- cryptgaurd404
+
+api :- mongodb+srv://cryptgaurduser:cryptgaurd404@cluster0.hd3bt4v.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+
+connection string :-
+mongodb+srv://cryptgaurduser:<password>@cluster0.hd3bt4v.mongodb.net/
