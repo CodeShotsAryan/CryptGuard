@@ -1,0 +1,11 @@
+# Dependency directories
+node_modules/
+vendor/
+
+# Build artifacts
+dist/
+build/
+
+# IDE files
+.vscode/
+.idea/
