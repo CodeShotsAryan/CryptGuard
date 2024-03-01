@@ -1,9 +1,6 @@
 import { useState, useRef } from "react";
 import { useNavigate } from "react-router";
 import './Draganddrop.css';
-import { encryptData  } from "../../../../backend/utils/cryptoUtils";
-import { generateKey } from "../../../../backend/utils/keyManagment";
-import {uploadFile} from "../../../../backend/utils/uploadFile"
 
 
 // function handleFiles(){
