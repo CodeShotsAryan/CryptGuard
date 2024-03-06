@@ -1,82 +1,68 @@
-import { useState, useRef } from "react";
-import { useNavigate } from "react-router";
-import './Draganddrop.css';
+import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { addFile , resetFiles } from '../../app/store';
+import './Draganddrop.css'
 
+const DragAndDrop = () => {
+  const dispatch = useDispatch();
+  const files = useSelector(state => state.files);
+  const [isConfirmationOpen, setIsConfirmationOpen] = useState(false);
 
-// function handleFiles(){
-//   Array.from(files).forEach(file => {
-//     const reader = new FileReader();
-//     reader.readAsBinaryString(file);
-//     render.onload = function(){
-//       const {encryptedData , key ,file.name} = Enc
-//     }
-//   });
-// }
-const Draganddrop = () => {
-  const [files, setFiles] = useState(null);
-  const inputRef = useRef();
-  const navigate = useNavigate();
+  const handleDrop = (e) => {
+    e.preventDefault();
+    const droppedFiles = [...e.dataTransfer.files];
+    const newFiles = droppedFiles.map((file) => ({
+      name: file.name,
+      size: file.size,
+      type: file.type,
+    }));
 
-  const handleDragOver = (event) => {
-    event.preventDefault();
+    // Dispatch action to add files to the store
+    newFiles.forEach((file) => {
+      dispatch(addFile(file));
+    });
+
+    // Open confirmation dialog
+    setIsConfirmationOpen(true);
   };
 
-  const handleDrop = (event) => {
-    event.preventDefault();
-    setFiles(event.dataTransfer.files);
+  const handleDragOver = (e) => {
+    e.preventDefault();
   };
 
-  const handleUpload = () => {
-    const formData = new FormData();
-    formData.append("Files", files);
-
-    console.log(formData);
-    console.log(files);
-    for (const value of formData.values()) {
-      console.log(value);
-    }
-    navigate("/dashboard");
+  const handleCancel = () => {
+    // Clear files if user cancels
+    // dispatch(cancelFile());
+    dispatch(resetFiles());
+    setIsConfirmationOpen(false);
   };
 
-  
-  if (files)
-    return (
-      <div className="uploads">
-        <ul>
-          {Array.from(files).map((file, idx) => (
-            <li key={idx}>{file.name}</li>
-          ))}
-        </ul>
-        <div className="actions">
-          <button onClick={() => setFiles(null)}>Cancel</button>
-          <button onClick={handleUpload}>Upload</button>
-        </div>
-      </div>
-    );
+  const handleSubmit = () => {
+    // Handle submission of files
+    setIsConfirmationOpen(false);
+    // Implement submission logic here
+    console.log("Submitted files:", files);
+  };
 
   return (
-    <>
-      <div className="dropzone-container bg-slate-800">
-        <div
-          className="dropzone"
-          onDragOver={handleDragOver}
-          onDrop={handleDrop}
-        >
-          <h1 className="text-slate-200">Drag and Drop Files to Upload</h1>
-          <h1 className="text-slate-200">Or</h1>
-          <input
-            type="file"
-            multiple
-            onChange={(event) => setFiles(event.target.files)}
-            hidden
-            accept="image/png, image/jpeg"
-            ref={inputRef}
-          />
-          <button onClick={() => inputRef.current.click()} className="w-48 h-14">Select Files</button>
-        </div>
+    <div className='dropzone-container'>
+      <div
+       className='dropzone'
+        onDrop={handleDrop}
+        onDragOver={handleDragOver}
+        style={{ width: '300px', height: '200px', border: '2px dashed #ccc' }}
+      >
+        <h3>Drag & Drop Files Here</h3>
       </div>
-    </>
+      {isConfirmationOpen && (
+        <div>
+          <p>Are you sure you want to submit these files?</p>
+          <button onClick={handleSubmit}>Submit</button>
+          <button onClick={handleCancel}>Cancel</button>
+        </div>
+      )}
+    </div>
   );
 };
 
-export default Draganddrop;
+export default DragAndDrop;
