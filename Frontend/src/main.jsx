@@ -20,6 +20,7 @@ import { Theme } from '@radix-ui/themes'
 import { Provider } from 'react-redux'
 import store from './app/store.js'
 import Draganddrop from './components/Dashboard/Draganddrop.jsx'
+import Filelisttable from './components/Dashboard/filelist/Filelisttable.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -35,6 +36,7 @@ const router = createBrowserRouter(
       <Route path='error' element={<Error/>}/>
       <Route path='loading' element={<Loading/>}/>
       <Route path='about' element={<About/>} />
+      <Route path='fileslist' element={<Filelisttable/>} />
     </Route>
   )
 )

@@ -13,9 +13,14 @@ function SideNav() {
     <div className="sidenav p-7">
       <div className="sidenav-1">
         <div className="sidenav-logo">Logo</div>
-        <i className="fa-solid fa-circle-user cursor-pointer text-3xl transition-all duration-200" style={{color:"#8532fa"}}></i>
+        <i
+          className="fa-solid fa-circle-user cursor-pointer text-3xl transition-all duration-200"
+          style={{ color: "#8532fa" }}
+        ></i>
         <i className="fa-solid fa-house cursor-pointer transition-all duration-200 hover:text-logo-color"></i>
-        <i className="fa-solid fa-folder-closed cursor-pointer transition-all duration-200 hover:text-logo-color"></i>
+        <Link to="/fileslist">
+          <i className="fa-solid fa-folder-closed cursor-pointer transition-all duration-200 hover:text-logo-color"></i>
+        </Link>
         <i className="fa-solid fa-lightbulb cursor-pointer transition-all duration-200 hover:text-logo-color"></i>
       </div>
       <Link to="/" className="sidenav-2" onClick={handleMakeFalse}>
