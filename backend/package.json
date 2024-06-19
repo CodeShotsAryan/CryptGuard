@@ -1,8 +1,4 @@
 {
-<<<<<<< HEAD
-  "dependencies": {
-    "mongoose": "^8.4.3"
-=======
   "name": "backend",
   "version": "1.0.0",
   "description": "",
@@ -26,6 +22,5 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.4.3",
     "nodemon": "^3.1.3"
->>>>>>> 09fa7412e564012ffbc983b954e45a371d7f3a9e
   }
 }
