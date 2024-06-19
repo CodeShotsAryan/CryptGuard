@@ -19,5 +19,9 @@ const userSchema = new mongoose.Schema({
         type:String,
         required:true,
     },
-    bio:String,
+    profilePictureURL:String,
 })
+
+const User = mongoose.model("User",userSchema)
+
+module.exports = User
